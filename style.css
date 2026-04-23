@@ -874,61 +874,55 @@ main.container_full {
     max-width: 1000px;
 }
 
-/* La boîte qui contient les images */
-.carousel-box {
-    flex: 1;
+/* Carrousel Standard Flexible */
+.standard-carousel {
+    position: relative;
+    max-width: 850px;
+    margin: 40px auto;
     border: 5px solid var(--color-dark);
     box-shadow: 15px 15px 0px var(--color-dark);
-    background: #FFFFFF;
+    background: #fff;
     overflow: hidden;
-    height: auto; /* Permet l'adaptation à la hauteur de l'image */
 }
 
-.carousel-box .carousel-inner {
+.standard-carousel .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    align-items: flex-start; /* Permet au conteneur de s'adapter à la photo active */
 }
 
-.carousel-box .carousel-item img {
+.standard-carousel .carousel-item {
+    min-width: 100%;
+}
+
+.standard-carousel .carousel-item img {
     width: 100%;
-    height: auto; /* L'image garde ses proportions réelles */
+    height: auto; /* L'image définit la hauteur du cadre */
     display: block;
 }
 
-/* Nouveaux boutons extérieurs */
-.carousel-control-outer {
-    background: var(--color-dark);
-    color: var(--color-light);
+/* Boutons classiques par-dessus */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(26, 26, 26, 0.7); /* Fond sombre semi-transparent */
+    color: white;
     border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s;
-    flex-shrink: 0; /* Empêche le bouton de s'écraser */
-    box-shadow: 5px 5px 0px var(--color-chili);
+    font-size: 1.2rem;
+    z-index: 10;
+    transition: 0.3s;
 }
 
-.carousel-control-outer:hover {
-    background: var(--color-chili);
-    transform: scale(1.1);
+.carousel-control:hover {
+    background: var(--color-birdseye); /* Ton rouge piment au survol */
 }
 
-/* Ajustement pour Mobile */
-@media (max-width: 768px) {
-    .project-main-image-flex {
-        gap: 10px;
-    }
-    .carousel-control-outer {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-}
+.carousel-control.prev { left: 10px; }
+.carousel-control.next { right: 10px; }
 
 /* Ajustement pour les petits écrans */
 @media (max-width: 768px) {

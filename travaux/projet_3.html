@@ -53,12 +53,10 @@
             </p>
         </section>
 
-        <section class="project-main-image-flex">
-    <button class="carousel-control-outer prev" onclick="moveSlide(-1)">❮</button>
-
-    <div class="carousel-box">
+        <section class="project-main-image">
+    <div class="carousel-container standard-carousel">
         <div class="carousel-inner">
-            <div class="carousel-item">
+            <div class="carousel-item active">
                 <img src="../img/travaux/projet3/1.jpg" alt="Visuel 1">
             </div>
             <div class="carousel-item">
@@ -68,10 +66,11 @@
                 <img src="../img/travaux/projet3/3.jpg" alt="Visuel 3">
             </div>
         </div>
+        
+        <button class="carousel-control prev" onclick="moveSlide(-1)">❮</button>
+        <button class="carousel-control next" onclick="moveSlide(1)">❯</button>
     </div>
-
-    <button class="carousel-control-outer next" onclick="moveSlide(1)">❯</button>
-    </section>
+</section>
 
         <nav class="project-navigation">
             <a href="projet_2.html" class="nav-btn">Projet Précédent</a>
