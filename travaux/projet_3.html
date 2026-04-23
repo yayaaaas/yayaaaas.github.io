@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail Projet 3 | ALICI'ART</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="color-yellow-bg">
+
+    <header class="main-header">
+        <div class="container_full">
+            <h1 class="logo"><a href="../index.html">ALICI'ART.</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Projets ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../travaux.html" class="color-serrano-text">Travaux</a></li>
+                            <li><a href="../photographies.html" class="color-habanero-text">Photographies</a></li>
+                            <li><a href="../ecrits.html" class="color-chili-text">Écrits</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#about">À Propos</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container_full project-detail-page">
+        <a href="../travaux.html" class="back-link">← Retour aux travaux</a>
+
+        <header class="project-header-simple">
+            <span class="project-type color-chili-text">INFOGRAPHIE</span>
+            <h2 class="super-title">PROJET 3 : Infographie</h2>
+        </header>
+
+        <section class="project-full-description-box">
+            <div class="project-info-tags" style="margin: 20px 0; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; line-height: 1.8;">
+                <div><span class="color-chili-text">Année :</span> MMI 1</div>
+                <div><span class="color-chili-text">Semestre :</span> Semestre 1</div>
+                <div><span class="color-chili-text">Ressources/SAE :</span> R1.08 - Production Graphique</div>
+            </div>
+            </br>
+            <h3 class="description-title">Description :</h3>
+            <p>
+                Pour ce projet nous avons eu l’occasion de travailler pour un commanditaire pour la première fois. 
+                Le but : créer un logo puis une charte graphique. 
+                Ici je vous expose le logo que j’ai proposé sous forme de Mockup, c’est à dire des images de ce à quoi pourrais ressembler le logo sur différents supports.
+            </p>
+        </section>
+
+        <section class="project-carousel-container">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="../img/travaux/projet3-1.jpg" alt="Visuel 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/travaux/projet3-2.jpg" alt="Visuel 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/travaux/projet3-3.jpg" alt="Visuel 3">
+                    </div>
+                </div>
+                
+                <button class="carousel-control prev" onclick="moveSlide(-1)">❮</button>
+                <button class="carousel-control next" onclick="moveSlide(1)">❯</button>
+            </div>
+        </section>
+
+        <nav class="project-navigation">
+            <a href="projet_2.html" class="nav-btn">Projet Précédent</a>
+            <a href="projet_4.html" class="nav-btn">Projet Suivant</a>
+        </nav>
+    </main>
+
+    <footer class="main-footer color-dark-bg">
+        <p>&copy; 2026 ALICI'ART. Osez la couleur.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const inner = document.querySelector('.carousel-inner');
+            const totalSlides = slides.length;
+            
+            currentIndex += direction;
+
+            if (currentIndex >= totalSlides) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = totalSlides - 1;
+
+            const offset = -currentIndex * 100;
+            inner.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 8 | ALICI'ART</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Mise en page spécifique pour le projet 8 */
+        .game-presentation-container {
+            display: flex;
+            gap: 20px;
+            height: 600px; 
+            margin-bottom: 40px;
+        }
+
+        .game-wrapper {
+            flex: 2; 
+            border: 5px solid var(--color-dark);
+            background: #000;
+        }
+
+        .game-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .scrolling-image-wrapper {
+            flex: 1; 
+            border: 5px solid var(--color-dark);
+            overflow-y: scroll; 
+            background: var(--color-light);
+            display: block;
+        }
+
+        .scrolling-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Style pour le bouton WordPress */
+        .wp-button-container {
+            margin: 30px 0 50px 0;
+        }
+
+        .wp-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--color-chili);
+            color: var(--color-light);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 3px solid var(--color-dark);
+            transition: all 0.3s ease;
+        }
+
+        .wp-btn:hover {
+            background-color: var(--color-dark);
+            transform: translate(-5px, -5px);
+            box-shadow: 5px 5px 0px var(--color-habanero);
+        }
+
+        @media (max-width: 900px) {
+            .game-presentation-container {
+                flex-direction: column;
+                height: auto;
+            }
+            .game-wrapper, .scrolling-image-wrapper {
+                height: 400px;
+            }
+        }
+        .wp-button-container {
+            margin: 30px 0 50px 0;
+            text-align: center; /* Ajoute cette ligne pour centrer le bouton */
+        }
+    </style>
+</head>
+<body class="color-yellow-bg">
+
+    <header class="main-header">
+        <div class="container_full">
+            <h1 class="logo"><a href="../index.html">ALICI'ART.</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Projets ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../travaux.html" class="color-serrano-text">Travaux</a></li>
+                            <li><a href="../photographies.html" class="color-habanero-text">Photographies</a></li>
+                            <li><a href="../ecrits.html" class="color-chili-text">Écrits</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#about">À Propos</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container_full project-detail-page">
+        <a href="../travaux.html" class="back-link">← Retour aux travaux</a>
+
+        <header class="project-header-simple">
+            <span class="project-type color-green-text" style="font-weight: 700;">JEU VIDÉO / DÉVELOPPEMENT</span>
+            <h2 class="super-title">PROJET 8 : Jeu vidéo</h2>
+            
+            <div class="project-info-tags" style="margin: 20px 0; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; line-height: 1.8;">
+                <div><span class="color-chili-text">Année :</span> MMI 1</div>
+                <div><span class="color-chili-text">Semestre :</span> Semestre 2</div>
+                <div><span class="color-chili-text">Ressource/SAE :</span> SAE 2.02</div>
+            </div>
+        </header>
+
+        <section class="project-full-description-box">
+            <h3 class="description-title">Description :</h3>
+            <p>
+                Ce jeu a été réalisé en binôme. Nous avons géré l'intégralité du projet, de la conception du gameplay au graphisme. 
+            </p>
+            <p>
+                Vous pouvez tester le jeu directement dans la fenêtre ci-dessous, tandis que la colonne de droite présente l'intégralité des assets graphiques du niveau.
+            </p>
+
+            <div class="wp-button-container">
+                <a href="https://web-mmi2.iutbeziers.fr/~alicia.yellet/SAE202/" target="_blank" class="wp-btn">Voir le site WordPress</a>
+            </div>
+        </section>
+
+        <section class="game-presentation-container">
+            <div class="game-wrapper">
+                <iframe src="https://web-mmi2.iutbeziers.fr/~lily.dutherage/SAE%20202/template_phaser_SAE202-final/"></iframe>
+            </div>
+
+            <div class="scrolling-image-wrapper">
+                <img src="../img/travaux/projet8.png" alt="Visuel complet du jeu">
+            </div>
+        </section>
+
+        <nav class="project-navigation" style="margin-top: 80px;">
+            <a href="projet_7.html" class="nav-btn">Projet Précédent</a>
+            <a href="projet_9.html" class="nav-btn">Projet Suivant</a>
+        </nav>
+    </main>
+
+    <footer class="main-footer color-dark-bg">
+        <p>&copy; 2026 ALICI'ART. Osez la couleur.</p>
+    </footer>
+
+</body>
+</html>
