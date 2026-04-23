@@ -864,6 +864,72 @@ main.container_full {
     display: block;
 }
 
+/* Conteneur principal flexible */
+.project-main-image-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+/* La boîte qui contient les images */
+.carousel-box {
+    flex: 1;
+    border: 5px solid var(--color-dark);
+    box-shadow: 15px 15px 0px var(--color-dark);
+    background: #FFFFFF;
+    overflow: hidden;
+    height: auto; /* Permet l'adaptation à la hauteur de l'image */
+}
+
+.carousel-box .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-box .carousel-item img {
+    width: 100%;
+    height: auto; /* L'image garde ses proportions réelles */
+    display: block;
+}
+
+/* Nouveaux boutons extérieurs */
+.carousel-control-outer {
+    background: var(--color-dark);
+    color: var(--color-light);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    flex-shrink: 0; /* Empêche le bouton de s'écraser */
+    box-shadow: 5px 5px 0px var(--color-chili);
+}
+
+.carousel-control-outer:hover {
+    background: var(--color-chili);
+    transform: scale(1.1);
+}
+
+/* Ajustement pour Mobile */
+@media (max-width: 768px) {
+    .project-main-image-flex {
+        gap: 10px;
+    }
+    .carousel-control-outer {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
 /* Ajustement pour les petits écrans */
 @media (max-width: 768px) {
     .carousel-item img {
