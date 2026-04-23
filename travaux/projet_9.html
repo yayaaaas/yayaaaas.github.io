@@ -6,6 +6,48 @@
     <title>Projet 9 | ALICI'ART</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        .media-side-by-side {
+    display: flex;
+    gap: 20px;            /* Espace entre la photo et la vidéo */
+    align-items: stretch; /* Force la même hauteur */
+    margin-bottom: 50px;
+    }
+
+    .media-item {
+        flex: 1;             /* Donne la même largeur aux deux colonnes */
+        display: flex;
+    }
+
+    .media-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;   /* Important : recadre l'image pour remplir la hauteur sans se déformer */
+        border: 5px solid var(--color-dark);
+        box-shadow: 10px 10px 0px var(--color-dark);
+    }
+
+    .video-wrapper {
+        width: 100%;
+        position: relative;
+        border: 5px solid var(--color-dark);
+        box-shadow: 10px 10px 0px var(--color-dark);
+    }
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 350px;   /* Ajuste cette valeur selon tes besoins */
+    }
+
+    /* Version mobile : l'un sous l'autre */
+    @media (max-width: 768px) {
+        .media-side-by-side {
+            flex-direction: column;
+        }
+    }
+    </style>
+
 </head>
 <body class="color-yellow-bg">
 
@@ -54,19 +96,19 @@
             </p>
         </section>
 
-        <section class="project-main-image" style="text-align: center; margin-bottom: 50px;">
-            <img src="../img/travaux/projet9.png" alt="Europe en 2100" style="max-width: 100%; height: auto; border: 5px solid var(--color-dark); box-shadow: 20px 20px 0px var(--color-dark);">
-        </section>
-
-        <section class="project-video-container">
-            <div class="video-wrapper">
-                <iframe 
-                    src="URL" 
-                    title="Vidéo du projet" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+        <section class="media-side-by-side">
+            <div class="media-item">
+                <img src="../img/travaux/projet9.png" alt="Europe en 2100">
+            </div>
+            <div class="media-item">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="URL_DE_TA_VIDEO" 
+                        title="Vidéo du projet" 
+                        frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </section>
 
