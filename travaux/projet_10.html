@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1 | ALICI'ART</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="color-yellow-bg">
+
+    <header class="main-header">
+        <div class="container_full">
+            <h1 class="logo"><a href="../index.html">ALICI'ART.</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Projets ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../travaux.html" class="color-serrano-text">Travaux</a></li>
+                            <li><a href="../photographies.html" class="color-habanero-text">Photographies</a></li>
+                            <li><a href="../ecrits.html" class="color-chili-text">Écrits</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#about">À Propos</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container_full project-detail-page">
+        <a href="../travaux.html" class="back-link">← Retour aux travaux</a>
+
+        <header class="project-header-simple">
+            <span class="project-type color-habanero-text">AUDIOVISUEL</span>
+            <h2 class="super-title">PROJET 1 : SAE – Production Audiovisuel </h2>
+        </header>
+
+        <section class="project-full-description-box">
+            <div class="project-info-tags" style="margin: 20px 0; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; line-height: 1.8;">
+                <div><span class="color-chili-text">Année :</span> MMI 1</div>
+                <div><span class="color-chili-text">Semestre :</span> Semestre 1</div>
+                <div><span class="color-chili-text">Ressources/SAE :</span> SAÉ 1.04 - Production audio et vidéo</div>
+            </div>
+            </br>
+            <h3 class="description-title">Description :</h3>
+            <p>
+                Lors d’un travail en groupe, nous avons produit un court métrage. 
+                Nous l’avons appeler « 12 ». 
+                Le court métrage mêle humour, thriller mais également psychose. 
+                Nous avons tout d’abord dû construire notre avant projet à l’aide de l’écriture du scénario et du script, du Découpage Technique (DT) mais aussi de storyboard. 
+                Ensuite nous avons tourner les scènes. 
+                Et en dernier temps nous avons travailler sur le montage. 
+                Nous avons chacun dû produire notre montage et ci-dessous vous pourrez retrouver ma version.
+            </p>
+        </section>
+
+        <section class="project-video-container">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://youtu.be/L_UZwmvm0JA?si=897EvEhTueY_lJwx" 
+                    title="Vidéo du projet" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        
+
+        
+
+        <nav class="project-navigation">
+            <a href="projet_9.html" class="nav-btn">Projet Précédent</a>
+            <a href="projet_11.html" class="nav-btn">Projet Suivant</a>
+        </nav>
+    </main>
+
+    <footer class="main-footer color-dark-bg">
+        <p>&copy; 2026 ALICI'ART. Osez la couleur.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const inner = document.querySelector('.carousel-inner');
+            const totalSlides = slides.length;
+            
+            currentIndex += direction;
+
+            if (currentIndex >= totalSlides) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = totalSlides - 1;
+
+            const offset = -currentIndex * 100;
+            inner.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
