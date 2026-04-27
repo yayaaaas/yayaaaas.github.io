@@ -992,7 +992,33 @@ main.container_full {
     .p12-col { width: 100%; max-width: 400px; }
 }
 
+/* --- SPECIFIQUE PROJET 14 --- */
+.p14-grid-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Colonne gauche un peu plus large */
+    gap: 30px;
+    margin: 40px 0;
+    align-items: start;
+}
 
+.p14-mockup-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre les deux mockups de droite */
+}
+
+/* On s'assure que les frames s'adaptent bien */
+.p14-col-left .p12-frame, 
+.p14-mockup-stack .p12-frame {
+    margin-bottom: 0;
+}
+
+/* Adaptation Mobile */
+@media (max-width: 850px) {
+    .p14-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
