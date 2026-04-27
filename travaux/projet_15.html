@@ -23,13 +23,15 @@
         }
 
         .phone-mockup {
-            width: 100%;
+            width: 320px; /* Largeur fixe plus naturelle pour un mobile */
             height: 650px;
             background: var(--color-dark);
             border: 12px solid var(--color-dark);
             border-radius: 45px;
-            box-shadow: 10px 10px 0px var(--color-habanero);
+            box-shadow: 15px 15px 0px var(--color-habanero); /* Ombre plus marquée */
             overflow: hidden;
+            margin-left: auto; /* Centre le téléphone dans sa colonne */
+            margin-right: auto;
         }
 
         .phone-screen iframe {
@@ -39,11 +41,10 @@
         }
 
         /* --- TAILLE UNIFIÉE (15%) --- */
-        /* On applique 15% aux conteneurs Flip et aux carrousels */
         .p15-uniform-size {
-            width: 15% !important;
-            min-width: 160px; /* Sécurité pour la lisibilité */
-            margin-bottom: 40px;
+            width: 80% !important; 
+            max-width: 600px; /* On met une limite pour ne pas que ce soit trop grand sur très grand écran */
+            margin-bottom: 50px;
         }
 
         /* Grille pour les 2 cartes Flip côte à côte */
@@ -108,6 +109,31 @@
         }
 
         .carousel-item { min-width: 100%; }
+        
+        .carousel-control {
+            background: var(--color-dark);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: 900;
+            transition: 0.3s;
+        }
+
+        .carousel-control:hover {
+            background: var(--color-habanero);
+            transform: scale(1.1);
+        }
+
+        .p15-section {
+            margin-bottom: 80px; /* Plus d'espace entre les grandes étapes */
+        }
+
+        .p12-label {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            display: block;
+        }
 
         /* Responsive */
         @media (max-width: 1100px) {
