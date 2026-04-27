@@ -992,31 +992,36 @@ main.container_full {
     .p12-col { width: 100%; max-width: 400px; }
 }
 
-/* --- SPECIFIQUE PROJET 14 --- */
-.p14-grid-container {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Colonne gauche un peu plus large */
-    gap: 30px;
-    margin: 40px 0;
-    align-items: start;
+/* --- FORCE LE CÔTÉ À CÔTÉ POUR LE PROJET 14 --- */
+.p14-layout-unique {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 30px !important;
+    align-items: flex-start !important;
+    margin: 40px 0 !important;
 }
 
-.p14-mockup-stack {
+.p14-visual {
+    flex: 1 !important; /* Force chaque colonne à prendre 50% */
+    min-width: 0;
+}
+
+.p14-stack {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espace entre les deux mockups de droite */
+    gap: 20px;
 }
 
-/* On s'assure que les frames s'adaptent bien */
-.p14-col-left .p12-frame, 
-.p14-mockup-stack .p12-frame {
-    margin-bottom: 0;
+.p14-visual img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
 }
 
-/* Adaptation Mobile */
-@media (max-width: 850px) {
-    .p14-grid-container {
-        grid-template-columns: 1fr;
+/* On garde le responsive pour mobile */
+@media (max-width: 800px) {
+    .p14-layout-unique {
+        flex-direction: column !important;
     }
 }
 
