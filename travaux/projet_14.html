@@ -6,6 +6,38 @@
     <title>Projet 14 | ALICI'ART</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+    .p14-flex-layout {
+        display: grid !important;
+        grid-template-columns: 1.2fr 1fr !important; /* Deux colonnes côte à côte */
+        gap: 30px !important;
+        margin: 40px 0 !important;
+        align-items: start !important;
+    }
+
+    .p14-main-col, .p14-side-col {
+        width: 100% !important;
+    }
+
+    .p14-stack {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .p14-flex-layout img {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    /* Force le passage en colonne uniquement sur petit mobile */
+    @media (max-width: 850px) {
+        .p14-flex-layout {
+            grid-template-columns: 1fr !important;
+        }
+    } 
+    </style>
 </head>
 <body class="color-yellow-bg">
 
