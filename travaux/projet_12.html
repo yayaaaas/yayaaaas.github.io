@@ -51,24 +51,35 @@
             </p>
         </section>
 
-        <section class="project-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px;">
-            <div class="gallery-item">
-                <h4 style="margin-bottom: 10px;">L'Affiche</h4>
-                <img src="../img/travaux/projet12/1.png" alt="Affiche principale">
+        <section class="project-gallery-fancy">
+        <div class="gallery-card card-large">
+            <h4 class="card-label">L'Affiche</h4>
+            <div class="card-frame">
+                <img src="../img/travaux/projet12/1.png" alt="Affiche">
             </div>
-            <div class="gallery-item">
-                <h4 style="margin-bottom: 10px;">Le flyers recto</h4>
-                <img src="../img/travaux/projet12/2.png" alt="Le flyers recto">
-            </div>
-            
-            <div class="gallery-item">
-                <h4 style="margin-bottom: 10px;">Le flyers verso</h4>
-                <img src="../img/travaux/projet12/3.png" alt="Le flyers verso">
-            </div>
-            <div class="gallery-item">
-                <h4 style="margin-bottom: 10px;">Le Moodboard (Verso)</h4>
+        </div>
+
+        <div class="gallery-card">
+            <h4 class="card-label">Le Flyer (Clique pour retourner)</h4>
+            <label class="flyer-flip-box">
+                <input type="checkbox" class="flip-toggle">
+                <div class="flyer-inner">
+                    <div class="flyer-front">
+                        <img src="../img/travaux/projet12/2.png" alt="Flyer Recto">
+                    </div>
+                    <div class="flyer-back">
+                        <img src="../img/travaux/projet12/3.png" alt="Flyer Verso">
+                    </div>
+                </div>
+            </label>
+        </div>
+
+        <div class="gallery-card">
+            <h4 class="card-label">Le Moodboard</h4>
+            <div class="card-frame">
                 <img src="../img/travaux/projet12/4.png" alt="Moodboard">
             </div>
+        </div>
         </section>
 
         <nav class="project-navigation" style="margin-top: 80px;">
