@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-    /* --- STRUCTURE PROJET 15 --- */
     .p15-main-layout {
         display: grid !important;
         grid-template-columns: 350px 1fr !important; /* Fixe la largeur du téléphone */
@@ -24,32 +23,33 @@
     /* --- GRILLE FLIP --- */
     .p15-flip-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Force 2 colonnes */
+        grid-template-columns: 1fr 1fr; /* Garde les deux colonnes côte à côte */
         gap: 20px;
         width: 100%;
+        max-width: 500px; /* LIMITE LA LARGEUR GLOBALE DU GROUPE FLIP */
     }
 
-    .p12-flip-card {
-        width: 100%;
+    .p15-flip-card {
+        width: 100%; /* S'adapte au max-width du parent */
         cursor: pointer;
     }
 
-    .p12-flip-inner {
-        aspect-ratio: 1 / 1.6; /* Ajuste selon le format de tes captures mobile */
+    .p15-flip-inner {
+        aspect-ratio: 1 / 1.6; 
         width: 100%;
     }
 
-    .p12-front img, .p12-back img {
+    .p15-front img, .p15-back img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Évite de déformer les captures */
+        object-fit: cover; 
         border: 4px solid var(--color-dark);
         box-shadow: 8px 8px 0px var(--color-dark);
     }
 
     /* --- AJUSTEMENT CARROUSELS --- */
     .p15-content-column .standard-carousel {
-        max-width: 100% !important;
+        max-width: 50% !important; /* RÉDUIT LA LARGEUR DU CARROUSEL DE MOITIÉ */
         margin: 10px 0 30px 0;
     }
 
@@ -64,7 +64,11 @@
             margin-bottom: 40px;
         }
         .p15-flip-grid {
-            grid-template-columns: 1fr; /* Un seul par ligne sur mobile */
+            grid-template-columns: 1fr; 
+            max-width: 100%; /* Reprend toute la largeur sur mobile pour la lisibilité */
+        }
+        .p15-content-column .standard-carousel {
+            max-width: 100% !important; /* Reprend toute la largeur sur mobile */
         }
     }
     </style>
