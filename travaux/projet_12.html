@@ -15,7 +15,14 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="../travaux.html">Projets</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Projets ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../travaux.html" class="color-serrano-text">Travaux</a></li>
+                            <li><a href="../photographies.html" class="color-habanero-text">Photographies</a></li>
+                            <li><a href="../ecrits.html" class="color-chili-text">Écrits</a></li>
+                        </ul>
+                    </li>
                     <li><a href="../index.html#about">À Propos</a></li>
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
@@ -27,43 +34,42 @@
         <a href="../travaux.html" class="back-link">← Retour aux travaux</a>
 
         <header class="project-header-simple">
-            <span class="project-type color-chili-text">GRAPHISME</span>
-            <h2 class="super-title">PROJET 12 : Affiche fête de village</h2>
+            <span class="project-type color-chili-text">COMMUNICATION VISUELLE</span>
+            <h2 class="super-title">PROJET 12 : Moodboard & Print</h2>
         </header>
 
         <section class="project-full-description-box">
-            <h3 class="description-title">Le Projet :</h3>
-            <p>Conception complète d'une identité visuelle déclinée sur plusieurs supports : un moodboard pour définir l'univers, une affiche promotionnelle et un flyer recto/verso.</p>
+            <h3 class="description-title">Description :</h3>
+            <p>
+                Conception d'une identité visuelle complète. Ce projet regroupe la création d'un moodboard intentionnel, d'une affiche grand format et d'un flyer promotionnel décliné en recto et verso.
+            </p>
         </section>
 
-        <section class="project-media-grid">
-            <div class="media-card">
-                <h4>Moodboard</h4>
-                <img src="../img/travaux/projet12/4.png" alt="Moodboard Projet 12">
+        <section class="project-gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 40px;">
+            <div class="gallery-item">
+                <h4 style="margin-bottom: 10px; font-weight: 900; text-transform: uppercase;">Le Moodboard</h4>
+                <img src="../img/travaux/projet12/4.png" alt="Moodboard" style="width: 100%; height: auto; border: 5px solid var(--color-dark); box-shadow: 15px 15px 0px var(--color-dark);">
             </div>
-            <div class="media-card">
-                <h4>Affiche</h4>
-                <img src="../img/travaux/projet12/1.png" alt="Affiche Projet 12">
+            
+            <div class="gallery-item">
+                <h4 style="margin-bottom: 10px; font-weight: 900; text-transform: uppercase;">L'Affiche</h4>
+                <img src="../img/travaux/projet12/1.png" alt="Affiche" style="width: 100%; height: auto; border: 5px solid var(--color-dark); box-shadow: 15px 15px 0px var(--color-dark);">
+            </div>
+            
+            <div class="gallery-item">
+                <h4 style="margin-bottom: 10px; font-weight: 900; text-transform: uppercase;">Le Flyer (Recto)</h4>
+                <img src="../img/travaux/projet12/2.jpg" alt="Flyer Recto" style="width: 100%; height: auto; border: 5px solid var(--color-dark); box-shadow: 15px 15px 0px var(--color-dark);">
+            </div>
+
+            <div class="gallery-item">
+                <h4 style="margin-bottom: 10px; font-weight: 900; text-transform: uppercase;">Le Flyer (Verso)</h4>
+                <img src="../img/travaux/projet12/3.jpg" alt="Flyer Verso" style="width: 100%; height: auto; border: 5px solid var(--color-dark); box-shadow: 15px 15px 0px var(--color-dark);">
             </div>
         </section>
 
-        <section class="flyer-section">
-            <h3 class="description-title">Le Flyer (Survolez pour retourner)</h3>
-            <div class="flyer-container">
-                <div class="flyer-inner">
-                    <div class="flyer-front">
-                        <img src="../img/travaux/projet12/2.jpg" alt="Flyer Recto">
-                    </div>
-                    <div class="flyer-back">
-                        <img src="../img/travaux/projet12/3.jpg" alt="Flyer Verso">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <nav class="project-navigation">
+        <nav class="project-navigation" style="margin-top: 80px;">
             <a href="projet_11.html" class="nav-btn">Projet Précédent</a>
-            <a href="projet_13.html" class="nav-btn">Tous les travaux</a>
+            <a href="projet_13.html" class="nav-btn">Projet Suivant</a>
         </nav>
     </main>
 
