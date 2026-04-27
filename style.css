@@ -992,36 +992,35 @@ main.container_full {
     .p12-col { width: 100%; max-width: 400px; }
 }
 
-/* --- FORCE LE CÔTÉ À CÔTÉ POUR LE PROJET 14 --- */
-.p14-layout-unique {
-    display: flex !important;
-    flex-direction: row !important;
+/* --- FIX FINAL PROJET 14 --- */
+.p14-flex-layout {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important; /* Deux colonnes côte à côte */
     gap: 30px !important;
-    align-items: flex-start !important;
     margin: 40px 0 !important;
+    align-items: start !important;
 }
 
-.p14-visual {
-    flex: 1 !important; /* Force chaque colonne à prendre 50% */
-    min-width: 0;
+.p14-main-col, .p14-side-col {
+    width: 100% !important;
 }
 
 .p14-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
 }
 
-.p14-visual img {
+.p14-flex-layout img {
     width: 100% !important;
     height: auto !important;
-    display: block;
+    display: block !important;
 }
 
-/* On garde le responsive pour mobile */
-@media (max-width: 800px) {
-    .p14-layout-unique {
-        flex-direction: column !important;
+/* Force le passage en colonne uniquement sur petit mobile */
+@media (max-width: 850px) {
+    .p14-flex-layout {
+        grid-template-columns: 1fr !important;
     }
 }
 
