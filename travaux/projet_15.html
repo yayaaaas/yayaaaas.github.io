@@ -23,14 +23,13 @@
     /* --- GRILLE FLIP --- */
     .p15-flip-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Garde les deux colonnes côte à côte */
+        grid-template-columns: 1fr 1fr; 
         gap: 20px;
-        width: 100%;
-        max-width: 500px; /* LIMITE LA LARGEUR GLOBALE DU GROUPE FLIP */
+        width: 15% !important; /* RÉDUIT LE GROUPE D'IMAGES À 15% DE LA LARGEUR */
     }
 
     .p15-flip-card {
-        width: 100%; /* S'adapte au max-width du parent */
+        width: 100%; 
         cursor: pointer;
     }
 
@@ -49,7 +48,7 @@
 
     /* --- AJUSTEMENT CARROUSELS --- */
     .p15-content-column .standard-carousel {
-        max-width: 50% !important; /* RÉDUIT LA LARGEUR DU CARROUSEL DE MOITIÉ */
+        max-width: 15% !important; /* RÉDUIT LE CARROUSEL À 15% DE LA LARGEUR */
         margin: 10px 0 30px 0;
     }
 
@@ -65,7 +64,7 @@
         }
         .p15-flip-grid {
             grid-template-columns: 1fr; 
-            max-width: 100%; /* Reprend toute la largeur sur mobile pour la lisibilité */
+            width: 100% !important; /* Reprend toute la largeur sur mobile pour la lisibilité */
         }
         .p15-content-column .standard-carousel {
             max-width: 100% !important; /* Reprend toute la largeur sur mobile */
