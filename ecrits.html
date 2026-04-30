@@ -7,20 +7,33 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
-        .maintenance-container {
+        /* --- STRUCTURE POUR BLOQUER LE FOOTER EN BAS --- */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        main {
+            flex: 1; /* Pousse le footer vers le bas */
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 60vh;
+            align-items: center; /* Centre le texte verticalement */
             padding: 20px;
         }
 
+        /* --- STYLE DE LA BOX CENTRALE --- */
         .maintenance-box {
             background: white;
             border: 6px solid var(--color-dark);
             box-shadow: 15px 15px 0px var(--color-habanero);
             padding: 50px;
-            text-align: center;
+            text-align: center; /* Centre le texte horizontalement */
             max-width: 600px;
             transition: transform 0.3s ease;
         }
@@ -31,7 +44,6 @@
         }
 
         .maintenance-title {
-            font-family: 'Rubik', sans-serif;
             font-weight: 900;
             text-transform: uppercase;
             font-size: 2.5rem;
@@ -45,6 +57,7 @@
             color: var(--color-dark);
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin: 0;
         }
 
         @media (max-width: 600px) {
@@ -55,28 +68,37 @@
 </head>
 <body class="color-yellow-bg">
 
+    <!-- HEADER ORIGINAL RÉINTÉGRÉ -->
     <header class="main-header">
         <div class="container_full">
             <h1 class="logo"><a href="index.html">ALICI'ART.</a></h1>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="travaux.html">Projets</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Projets ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="travaux.html" class="color-serrano-text">Travaux</a></li>
+                            <li><a href="photographies.html" class="color-habanero-text">Photographies</a></li>
+                            <li><a href="ecrits.html" class="color-chili-text">Écrits</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#about">À Propos</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container_full">
-        <div class="maintenance-container">
-            <div class="maintenance-box">
-                <h2 class="maintenance-title">Section en cours de <span class="color-chili-text">préparation</span></h2>
-                <p class="maintenance-text">Mes textes arrivent bientôt sur aliciart.fr</p>
-            </div>
+    <!-- CONTENU CENTRÉ -->
+    <main>
+        <div class="maintenance-box">
+            <h2 class="maintenance-title">Section en cours de <span class="color-chili-text">préparation</span></h2>
+            <p class="maintenance-text">Mes textes arrivent bientôt sur aliciart.fr</p>
         </div>
     </main>
 
+    <!-- FOOTER BLOQUÉ EN BAS -->
     <footer class="main-footer color-dark-bg">
         <p>&copy; 2026 ALICI'ART. Osez la couleur.</p>
     </footer>
