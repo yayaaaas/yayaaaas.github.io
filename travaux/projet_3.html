@@ -19,7 +19,7 @@
 
     .slider-wrapper {
         position: relative;
-        height: 500px; /* Ajustez la hauteur selon vos images */
+        height: 500px; 
         overflow: hidden;
     }
 
@@ -87,7 +87,7 @@
                 <div><span class="color-chili-text">Semestre :</span> Semestre 1</div>
                 <div><span class="color-chili-text">Ressources/SAE :</span> R1.08 - Production Graphique</div>
             </div>
-            </br>
+            <br>
             <h3 class="description-title">Description :</h3>
             <p>
                 Pour ce projet nous avons eu l’occasion de travailler pour un commanditaire pour la première fois. 
@@ -111,11 +111,6 @@
                 </div>
             </div>
         </section>
-        
-        <button class="carousel-control prev" onclick="moveSlide(-1)">❮</button>
-        <button class="carousel-control next" onclick="moveSlide(1)">❯</button>
-    </div>
-</section>
 
         <nav class="project-navigation">
             <a href="projet_2.html" class="nav-btn">Projet Précédent</a>
@@ -126,20 +121,22 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        let currentIndex = 0;
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const counter = document.getElementById('slide-counter');
 
-        function moveSlide(direction) {
-            const slides = document.querySelectorAll('.carousel-item');
-            const inner = document.querySelector('.carousel-inner');
-            const totalSlides = slides.length;
+        function changeSlide(direction) {
+            // Retire la classe active du slide actuel
+            slides[currentSlide].classList.remove('active');
             
-            currentIndex += direction;
-
-            if (currentIndex >= totalSlides) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = totalSlides - 1;
-
-            const offset = -currentIndex * 100;
-            inner.style.transform = `translateX(${offset}%)`;
+            // Calcule le nouvel index (boucle infinie)
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            
+            // Ajoute la classe active au nouveau slide
+            slides[currentSlide].classList.add('active');
+            
+            // Met à jour le texte du compteur
+            counter.innerText = `${currentSlide + 1} / ${slides.length}`;
         }
     </script>
 </body>
