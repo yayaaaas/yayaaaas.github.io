@@ -8,6 +8,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
     <script src="../header.js"></script>
     <script src="../footer.js"></script>
+    <style>
+    .custom-slider {
+        max-width: 900px;
+        margin: 40px auto;
+        border: 6px solid var(--color-dark);
+        box-shadow: 15px 15px 0px var(--color-habanero);
+        background: white;
+    }
+
+    .slider-wrapper {
+        position: relative;
+        height: 500px; /* Ajustez la hauteur selon vos images */
+        overflow: hidden;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide.active { opacity: 1; z-index: 5; }
+
+    .slide img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .slider-nav {
+        background: var(--color-dark);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 15px;
+        font-weight: 900;
+    }
+
+    .nav-arrow {
+        background: none;
+        border: 2px solid white;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 5px 15px;
+        transition: 0.2s;
+    }
+
+    .nav-arrow:hover {
+        background: var(--color-cilipadi);
+        color: var(--color-dark);
+    }
+    </style>
 </head>
 <body class="color-yellow-bg">
 
@@ -37,18 +97,20 @@
         </section>
 
         <section class="project-main-image">
-    <div class="carousel-container standard-carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../img/travaux/projet3/1.jpg" alt="Visuel 1">
+            <div class="custom-slider">
+                <div class="slider-wrapper">
+                    <div class="slide active"><img src="../img/travaux/projet3/1.jpg" alt="Visuel 1"></div>
+                    <div class="slide"><img src="../img/travaux/projet3/2.jpg" alt="Visuel 2"></div>
+                    <div class="slide"><img src="../img/travaux/projet3/3.jpg" alt="Visuel 3"></div>
+                </div>
+                
+                <div class="slider-nav">
+                    <button class="nav-arrow" onclick="changeSlide(-1)">❮</button>
+                    <span id="slide-counter">1 / 3</span>
+                    <button class="nav-arrow" onclick="changeSlide(1)">❯</button>
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="../img/travaux/projet3/2.jpg" alt="Visuel 2">
-            </div>
-            <div class="carousel-item">
-                <img src="../img/travaux/projet3/3.jpg" alt="Visuel 3">
-            </div>
-        </div>
+        </section>
         
         <button class="carousel-control prev" onclick="moveSlide(-1)">❮</button>
         <button class="carousel-control next" onclick="moveSlide(1)">❯</button>
