@@ -24,7 +24,7 @@
 
 /* --- CODE À RAJOUTER POUR FIXER LA CASE TRAVAUX --- */
 .color-banana-bg { background-color: var(--color-banana); color: var(--color-dark); }
-.color-dark-text { color: var(--color-dark); }}
+.color-dark-text { color: var(--color-dark); }
 
 .color-cilipadi-text { color: var(--color-cilipadi); }
 .color-yellow-text { color: var(--color-yellow); }
