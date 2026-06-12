@@ -13,6 +13,7 @@
 }
 
 /* --- CLASSES DE COULEUR UTILITAIRES --- */
+/* --- CLASSES DE COULEUR UTILITAIRES --- */
 .color-yellow-bg { background-color: var(--color-yellow); color: var(--color-dark); }
 .color-serrano-bg { background-color: var(--color-serrano); color: var(--color-light); }
 .color-habanero-bg { background-color: var(--color-habanero); color: var(--color-dark); }
@@ -20,6 +21,10 @@
 .color-green-bg { background-color: var(--color-green); color: var(--color-light); }
 .color-birdseye-bg { background-color: var(--color-birdseye); color: var(--color-light); }
 .color-dark-bg { background-color: var(--color-dark); color: var(--color-light); }
+
+/* --- CODE À RAJOUTER POUR FIXER LA CASE TRAVAUX --- */
+.color-banana-bg { background-color: var(--color-banana); color: var(--color-dark); }
+.color-dark-text { color: var(--color-dark); }}
 
 .color-cilipadi-text { color: var(--color-cilipadi); }
 .color-yellow-text { color: var(--color-yellow); }
