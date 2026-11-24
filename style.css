@@ -362,6 +362,36 @@ ul { list-style: none; padding: 0; margin: 0; }
     display: block;
 }
 
+/* --- SÉRIE 17 : 3 PORTRAITS (ratio 2:3, sans recadrage excessif) --- */
+.collage-grid.triple.series-17 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    align-items: start;
+}
+.collage-grid.triple.series-17 .item {
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+}
+.collage-grid.triple.series-17 .item img {
+    object-position: center 30%; /* garde les visages / le sujet en haut du cadre */
+}
+/* Tablette : on garde 3 colonnes mais avec un peu moins de marge */
+@media (max-width: 1024px) {
+    .collage-grid.triple.series-17 { gap: 6px; padding: 6px; }
+}
+/* Mobile : une colonne centrée, taille raisonnable */
+@media (max-width: 768px) {
+    .collage-grid.triple.series-17 {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .collage-grid.triple.series-17 .item {
+        width: 100%;
+        max-width: 420px;
+        height: auto; /* annule le height: 300px des triples sur mobile */
+    }
+}
+
 /* --- SÉRIE 12 : RESTRUCTURATION COMPLÈTE --- */
 .collage-grid.series-12 {
     display: grid !important; /* Force la grille */
