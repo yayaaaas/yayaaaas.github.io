@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <ul class="dropdown-content">
                             <li><a href="../travaux.html" class="color-serrano-text">Travaux</a></li>
                             <li><a href="../photographies.html" class="color-habanero-text">Photographies</a></li>
-                            <li><a href="../ecrits.html" class="color-chili-text">Écrits</a></li>
+                            <li><a href="../creations.html" class="color-chili-text">Créations</a></li>
                         </ul>
                     </li>
                     <li><a href="../a_propos.html">À Propos</a></li>
