@@ -238,6 +238,10 @@
                 dropdown.classList.remove('is-open');
             }
         });
+        document.querySelectorAll('.item img').forEach(img => {
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        });
     </script>
 </body>
 </html>
