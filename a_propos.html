@@ -140,6 +140,25 @@
         </div>
     </main>
 
+<script>
+    const colonne = document.querySelector('.about-photo-container');
+    const photo = document.querySelector('.about-photo-frame');
+    const carte = document.querySelector('.about-card');
+
+    function reglerSticky() {
+        if (window.innerWidth <= 900) {
+            colonne.style.height = '';
+            return;
+        }
+        // écart entre le haut de la colonne et le haut du bloc de texte
+        const ecart = carte.getBoundingClientRect().top - colonne.getBoundingClientRect().top;
+        colonne.style.height = (ecart + photo.offsetHeight) + 'px';
+    }
+
+    window.addEventListener('load', reglerSticky);
+    window.addEventListener('resize', reglerSticky);
+</script>
+
     <div id="footer-placeholder"></div>
 
 </body>
